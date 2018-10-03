@@ -1,0 +1,21 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial,sans-serif;
+  font-size: 16px;
+
+  /* font-weight: 400;
+  line-height: 1.8;
+  color: #b3b3b3;
+  background: #fff; */
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  max-height: 400px;
+}
+
+.highlight {
+  color: rebeccapurple;
+}

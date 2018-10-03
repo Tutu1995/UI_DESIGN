@@ -1,0 +1,317 @@
+
+ RUNS  problem-a/problem.spec.js
+ RUNS  problem-a/problem.spec.js
+ FAIL  problem-a/problem.spec.js
+  Used test-driven development
+    ✕ Used Jest to pre-test code, saved in `pretest.txt` (3ms)
+  Source code is valid
+    ✓ HTML validates without errors (8ms)
+    ✕ CSS validates without errors (294ms)
+  Has required HTML
+    ✕ Specifies charset (5ms)
+    ✕ Includes page title (2ms)
+    ✕ Includes author metadata (1ms)
+    ✕ Has a top-level heading
+    ✕ Has an image (1ms)
+    ✕ Includes a paragraph (1ms)
+    ✕ Includes a hyperlink in the paragraph
+    ✕ Includes a list (1ms)
+    ✕ List has at least 3 items (1ms)
+  Has required CSS
+    ✕ Links in local stylesheet (1ms)
+    ✕ Body has default font size (1ms)
+    ✕ Body has default font family (1ms)
+    ✕ Paragraphs have specified line height (1ms)
+    ✕ Images have constrained height
+    ✕ Important list item is colored (1ms)
+
+  ● Used test-driven development › Used Jest to pre-test code, saved in `pretest.txt`
+
+    ENOENT: no such file or directory, open '/Users/tutu/Desktop/problem-01-Tutu1995/problem-a/pretest.txt'
+
+      16 |   test('Used Jest to pre-test code, saved in `pretest.txt`', () => {
+      17 |     const path = __dirname + '/pretest.txt'
+    > 18 |     const pretest = fs.readFileSync(path, 'utf-8');
+         |                        ^
+      19 |     expect(pretest).toMatch(/Tests: +17 failed, 1 passed, 18 total/)
+      20 |   })
+      21 | })
+
+      at Object.readFileSync (problem-a/problem.spec.js:18:24)
+
+  ● Source code is valid › CSS validates without errors
+
+    Error
+
+      Error: error: Unexpected empty source (no-empty-source)
+             At line 1, column 1.
+
+  ● Has required HTML › Specifies charset
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+      52 |
+      53 |   test('Specifies charset', () => {
+    > 54 |     expect($('head > meta[charset]').length).toBe(1); //has 1 tag
+         |                                              ^
+      55 |   })
+      56 |
+      57 |   test('Includes page title', () => {
+
+      at Object.toBe (problem-a/problem.spec.js:54:46)
+
+  ● Has required HTML › Includes page title
+
+    expect(received).toEqual(expected)
+
+    Expected value to equal:
+      1
+    Received:
+      0
+
+      57 |   test('Includes page title', () => {
+      58 |     let title = $('head > title');
+    > 59 |     expect(title.length).toEqual(1); //has 1 tag
+         |                          ^
+      60 |     expect(title.text().length).toBeGreaterThan(0); //has content
+      61 |     expect(title.text()).not.toEqual("My Page Title");
+      62 |   })
+
+      at Object.toEqual (problem-a/problem.spec.js:59:26)
+
+  ● Has required HTML › Includes author metadata
+
+    expect(received).toEqual(expected)
+
+    Expected value to equal:
+      1
+    Received:
+      0
+
+      64 |   test('Includes author metadata', () => {
+      65 |     let author = $('head > meta[name="author"]')
+    > 66 |     expect(author.length).toEqual(1); //has 1 tag
+         |                           ^
+      67 |     expect(author.attr('content').length).toBeGreaterThan(0); //has content
+      68 |     expect(author.attr('content')).not.toEqual("your name");
+      69 |   })
+
+      at Object.toEqual (problem-a/problem.spec.js:66:27)
+
+  ● Has required HTML › Has a top-level heading
+
+    expect(received).toEqual(expected)
+
+    Expected value to equal:
+      1
+    Received:
+      0
+
+      71 |   test('Has a top-level heading', () => {
+      72 |     let h1 = $('h1');
+    > 73 |     expect(h1.length).toEqual(1); //has 1 tag
+         |                       ^
+      74 |     expect(h1.text()).toBeTruthy(); //contains text
+      75 |   })
+      76 |
+
+      at Object.toEqual (problem-a/problem.spec.js:73:23)
+
+  ● Has required HTML › Has an image
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: 1
+    Received: 0
+
+      77 |   test('Has an image', () => {
+      78 |     let img = $('img');
+    > 79 |     expect(img.length).toBeGreaterThanOrEqual(1); //has 1+ tags
+         |                        ^
+      80 |     expect(img.attr('src')).toMatch(/img\/.+/); //image in folder
+      81 |   })
+      82 |
+
+      at Object.toBeGreaterThanOrEqual (problem-a/problem.spec.js:79:24)
+
+  ● Has required HTML › Includes a paragraph
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: 1
+    Received: 0
+
+      83 |   test('Includes a paragraph', () => {
+      84 |     let p = $('p');
+    > 85 |     expect(p.length).toBeGreaterThanOrEqual(1); //has 1+ tags
+         |                      ^
+      86 |     expect(p.text()).toBeTruthy(); //contains text
+      87 |   })
+      88 |
+
+      at Object.toBeGreaterThanOrEqual (problem-a/problem.spec.js:85:22)
+
+  ● Has required HTML › Includes a hyperlink in the paragraph
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: 1
+    Received: 0
+
+      89 |   test('Includes a hyperlink in the paragraph', () => {
+      90 |     let a = $('p a');
+    > 91 |     expect(a.length).toBeGreaterThanOrEqual(1); //has 1+ tags
+         |                      ^
+      92 |     expect(a.attr('href')).toMatch(/https?:\/\/*/); //links to external page
+      93 |   })
+      94 |
+
+      at Object.toBeGreaterThanOrEqual (problem-a/problem.spec.js:91:22)
+
+  ● Has required HTML › Includes a list
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: 1
+    Received: 0
+
+      94 |
+      95 |   test('Includes a list', () => {
+    > 96 |     expect( $('ul, ol').length ).toBeGreaterThanOrEqual(1); //has 1+ tag
+         |                                  ^
+      97 |   })
+      98 |
+      99 |   test('List has at least 3 items', () => {
+
+      at Object.toBeGreaterThanOrEqual (problem-a/problem.spec.js:96:34)
+
+  ● Has required HTML › List has at least 3 items
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: 3
+    Received: 0
+
+       99 |   test('List has at least 3 items', () => {
+      100 |     let li = $('ul, ol').first().children('li');
+    > 101 |     expect( li.length ).toBeGreaterThanOrEqual(3); //has 3 tags
+          |                         ^
+      102 |
+      103 |     //no empty items!
+      104 |     let empty = li.filter(function(i,elem) { return $(this).text().length == 0; })
+
+      at Object.toBeGreaterThanOrEqual (problem-a/problem.spec.js:101:25)
+
+  ● Has required CSS › Links in local stylesheet
+
+    expect(received).toEqual(expected)
+
+    Expected value to equal:
+      1
+    Received:
+      0
+
+      118 |   test('Links in local stylesheet', () => {
+      119 |     let link = $('head > link');
+    > 120 |     expect( link.length ).toEqual(1);
+          |                           ^
+      121 |     expect( link.attr('href')).toMatch('css/style.css');
+      122 |   })
+      123 |
+
+      at Object.toEqual (problem-a/problem.spec.js:120:27)
+
+  ● Has required CSS › Body has default font size
+
+    expect(received).toEqual(expected)
+
+    Expected value to equal:
+      "16px"
+    Received:
+      undefined
+
+    Difference:
+
+      Comparing two different types of values. Expected string but received undefined.
+
+      123 |
+      124 |   test('Body has default font size', () => {
+    > 125 |     expect( $('body').css('font-size') ).toEqual('16px');
+          |                                          ^
+      126 |   })
+      127 |
+      128 |   test('Body has default font family', () => {
+
+      at Object.toEqual (problem-a/problem.spec.js:125:42)
+
+  ● Has required CSS › Body has default font family
+
+    TypeError: Cannot read property 'replace' of undefined
+
+      127 |
+      128 |   test('Body has default font family', () => {
+    > 129 |     let fontFamilySingleQuotes = ($('body').css('font-family')).replace(/"/g, '\'');
+          |                                  ^
+      130 |     expect(fontFamilySingleQuotes).toMatch(/'Helvetica Neue', *'?Helvetica'?, *'?Arial'?, *sans-serif/);
+      131 |   })
+      132 |
+
+      at Object.test (problem-a/problem.spec.js:129:34)
+
+  ● Has required CSS › Paragraphs have specified line height
+
+    TypeError: Cannot read property 'attribs' of undefined
+
+      133 |   test('Paragraphs have specified line height', () => {
+      134 |     let p = $('p')
+    > 135 |     expect(p.css('line-height') ).toEqual('1.5');
+          |              ^
+      136 |     expect(p.attr('id')).toBe(undefined); //shouldn't have id
+      137 |     expect(p.attr('class')).toBe(undefined); //should have class
+      138 |   })
+
+      at getCss (node_modules/cheerio/lib/api/css.js:69:25)
+      at initialize.Object.<anonymous>.exports.css (node_modules/cheerio/lib/api/css.js:25:12)
+      at Object.css (problem-a/problem.spec.js:135:14)
+
+  ● Has required CSS › Images have constrained height
+
+    TypeError: Cannot read property 'attribs' of undefined
+
+      139 |
+      140 |   test('Images have constrained height', () => {
+    > 141 |     expect($('img').css('max-height')).toEqual('400px');
+          |                     ^
+      142 |   })
+      143 |
+      144 |   test('Important list item is colored', () => {
+
+      at getCss (node_modules/cheerio/lib/api/css.js:69:25)
+      at initialize.Object.<anonymous>.exports.css (node_modules/cheerio/lib/api/css.js:25:12)
+      at Object.css (problem-a/problem.spec.js:141:21)
+
+  ● Has required CSS › Important list item is colored
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+      144 |   test('Important list item is colored', () => {
+      145 |     let li = $('li[class]')
+    > 146 |     expect(li.length).toBe(1); //only one item has class
+          |                       ^
+      147 |     expect(li.css('color')).toBeDefined(); //that item has a color
+      148 |   });
+      149 | })
+
+      at Object.toBe (problem-a/problem.spec.js:146:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       17 failed, 1 passed, 18 total
+Snapshots:   0 total
+Time:        5.673s
+Ran all test suites matching /problem-a/i.
