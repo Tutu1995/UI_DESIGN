@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box; /* all elements include border and padding in size */
+}
+
+body {
+  font-family: 'Merriweather', serif; 
+ 
+}
+
+.header{
+  background-image: url("img/pic1.png");
+  background-size: cover;    
+}
+
+/* section {
+  margin: .5rem 0;
+  padding: .5rem;
+  border: 1px solid gray;
+  
+} */
+
+header {
+  padding: .8em 0;
+
+}
+header p {
+  font-style: italic;
+}
+
+
+ol li {
+    font-weight: bold;
+
+}
+
+ul li {
+    font-weight: normal;
+}
+
+img {
+    height: 500px;
+    width: 600px;
+}
+
+.navbar-brand {
+  font-size:1.5rem;
+}
+
+.navbar-custom {
+  color:pink;
+  background: linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
+
+}
+
+li:hover{
+  color:#b7a57a;
+  border-bottom: .3rem solid #b7a57a;
+  /* padding: .8rem; */
+}
+
+.main-container {
+  min-height: 800px;
+  /* background-image: url('https://clothandpaperstudio.com.au/wp-content/uploads/2018/06/MIO8166-1800x1198.jpg'); */
+  background-image: url('../img/pic1.jpg');
+  background-repeat: no-repeat;
+  opacity:.5;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  /* background: linear-gradient( #3f87a6 50%, #ebf8e1, #f69d3c); */
+  }
+
+  .overview,.features{
+    margin-top:150px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .features{
+    padding-top:100px;
+    padding-bottom:250px;
+    font-family: 'Lato', sans-serif;
+  }
+  .overview h1 {
+    font-size: 50px; 
+    font-weight: bolder; 
+    line-height: 48px; 
+    margin-bottom: 40px;
+  }
+
+  .overview h3 {
+    color:rgb(102, 101, 101);
+    font-family: 'Lato', sans-serif;
+    font-size: 25px; 
+    font-weight: bold; 
+    line-height: 48px; 
+    margin-bottom: 30px;
+  }
+
+  .overview p{
+    color:rgb(102, 101, 101);
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 30px;
+  }
+  .btn {
+    background-color:#8366bb;
+  }
+  .title {
+    padding:260px;
+  }
+  .features {
+    background :linear-gradient(to right, rgb(101, 78, 163), rgb(234, 175, 200));
+  }
+  .features h2 {
+    font-size: 50px; 
+    font-weight: bolder; 
+    line-height: 48px; 
+    margin-bottom: 40px;
+  }
+
+  .features h3 {
+    color:rgb(12, 12, 12);
+    font-family: 'Lato', sans-serif;
+    font-size: 25px; 
+    font-weight: bold; 
+    line-height: 48px; 
+    margin-bottom: 30px;
+  }
+
+  .features p {
+    color:rgb(12, 12, 12);
+
+  }
+
+  75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+  .main-container p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    75% {
+      font-size: 300%;
+      margin-left: 25%;
+      width: 150%;
+    }
+  
+    to {
+      font-size: 200%;
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  
